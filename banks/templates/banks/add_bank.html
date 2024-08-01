@@ -1,0 +1,15 @@
+<!-- templates/banks/add_bank.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Bank</title>
+</head>
+<body>
+    <h1>Add Bank</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add Bank</button>
+    </form>
+</body>
+</html>

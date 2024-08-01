@@ -1,0 +1,15 @@
+<!-- templates/banks/list_banks.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>List of Banks</title>
+</head>
+<body>
+    <h1>List of Banks</h1>
+    <ul>
+        {% for bank in banks %}
+            <li><a href="{% url 'bank_detail' bank_id=bank.id %}">{{ bank.name }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!-- templates/banks/add_branch.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Branch to {{ bank.name }}</title>
+</head>
+<body>
+    <h1>Add Branch to {{ bank.name }}</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add Branch</button>
+    </form>
+</body>
+</html>

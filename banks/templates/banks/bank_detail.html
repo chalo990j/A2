@@ -1,0 +1,17 @@
+<!-- templates/banks/bank_detail.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ bank.name }}</title>
+</head>
+<body>
+    <h1>{{ bank.name }}</h1>
+    <p>Owner: {{ bank.owner }}</p>
+    <h2>Branches</h2>
+    <ul>
+        {% for branch in branches %}
+            <li><a href="{% url 'branch_detail' branch_id=branch.id %}">{{ branch.name }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
